@@ -6,6 +6,7 @@ type Response struct {
 	Code      int32  `protobuf:"varint,2,opt,name=code,proto3" json:"code,omitempty"`
 	Msg       string `protobuf:"bytes,3,opt,name=msg,proto3" json:"msg,omitempty"`
 	Status    string `protobuf:"bytes,4,opt,name=status,proto3" json:"status,omitempty"`
+	Message   string `protobuf:"bytes,5.opt,name=message,proto3" json:"message,omitempty"`
 }
 
 type response struct {
@@ -30,6 +31,9 @@ func (e *response) SetData(data interface{}) {
 
 func (e response) Clone() Responses {
 	return &e
+}
+func (e response) SetMessage(msg string) {
+	e.Message = msg
 }
 
 func (e *response) SetTraceID(id string) {

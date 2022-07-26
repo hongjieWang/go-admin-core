@@ -15,9 +15,11 @@ func Error(c *gin.Context, code int, err error, msg string) {
 	res := Default.Clone()
 	if err != nil {
 		res.SetMsg(err.Error())
+		res.SetMessage(err.Error())
 	}
 	if msg != "" {
 		res.SetMsg(msg)
+		res.SetMessage(msg)
 	}
 	res.SetTraceID(pkg.GenerateMsgIDFromContext(c))
 	res.SetCode(int32(code))
@@ -34,6 +36,7 @@ func OK(c *gin.Context, data interface{}, msg string) {
 	res.SetSuccess(true)
 	if msg != "" {
 		res.SetMsg(msg)
+		res.SetMessage(msg)
 	}
 	res.SetTraceID(pkg.GenerateMsgIDFromContext(c))
 	res.SetCode(http.StatusOK)
