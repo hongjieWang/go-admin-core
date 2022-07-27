@@ -18,6 +18,7 @@ require (
 	github.com/imdario/mergo v0.3.9
 	github.com/json-iterator/go v1.1.11
 	github.com/mattn/go-colorable v0.1.7 // indirect
+	github.com/nacos-group/nacos-sdk-go v1.1.1
 	github.com/nsqio/go-nsq v1.0.8
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.11.0
@@ -31,7 +32,7 @@ require (
 	google.golang.org/genproto v0.0.0-20200526211855-cb27e3aa2013 // indirect
 	google.golang.org/grpc v1.29.1
 	google.golang.org/protobuf v1.26.0-rc.1
-	gorm.io/driver/mysql v1.0.3
-	gorm.io/gorm v1.21.11
+	gorm.io/driver/mysql v1.1.2
+	gorm.io/gorm v1.23.1
 	gorm.io/plugin/dbresolver v1.1.0
 )

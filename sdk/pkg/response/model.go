@@ -32,7 +32,7 @@ func (e *response) SetData(data interface{}) {
 func (e response) Clone() Responses {
 	return &e
 }
-func (e response) SetMessage(msg string) {
+func (e *response) SetMessage(msg string) {
 	e.Message = msg
 }
 

@@ -44,6 +44,7 @@ func (e *Settings) init() {
 // Config 配置集合
 type Config struct {
 	Application *Application          `yaml:"application"`
+	Nacos       *Nacos                `yaml:"nacos"`
 	Ssl         *Ssl                  `yaml:"ssl"`
 	Logger      *Logger               `yaml:"logger"`
 	Jwt         *Jwt                  `yaml:"jwt"`
@@ -73,6 +74,7 @@ func Setup(s source.Source,
 		Settings: Config{
 			Application: ApplicationConfig,
 			Ssl:         SslConfig,
+			Nacos:       NacosConfig,
 			Logger:      LoggerConfig,
 			Jwt:         JwtConfig,
 			Database:    DatabaseConfig,
